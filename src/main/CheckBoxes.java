@@ -1,4 +1,5 @@
 package main;
 
-public class CheckBoxes {
+public class CheckBoxes extends Question{
+
 }
