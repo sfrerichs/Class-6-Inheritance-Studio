@@ -1,26 +1,28 @@
 package main;
 
-public class Question {
+public abstract class Question {
 
     String question;
     String correctAnswer;
 
     //constructor
-    public void question(String aQuestion, String aAnswer) {
+    public void question(String aQuestion) {
         question = aQuestion;
-        correctAnswer = aAnswer;
     }
+
+    public abstract void answer(String aAnswer);
+
+    //grading method
+    public abstract void grader(String userAnswer, String correctAnswer);
 
     //toString
-
-    @Override
-    public String toString() {
-        return question + "\nYour Answer: ";
-    }
+//    @Override
+//    public String toString() {
+//        return question + "\nYour Answer: ";
+//    }
 
 
     //getters and setters
-
     public String getQuestion() {
         return question;
     }

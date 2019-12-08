@@ -25,16 +25,16 @@ public class Quiz {
 
     //grade quiz
     public void gradeQuiz() {
-        String response = "";
         for( int i = 0; i < userAnswers.size(); i++) {
             String thisCorrectAnswer = questions.get(i).getCorrectAnswer();
             String thisUserAnswer = userAnswers.get(i);
             System.out.println(questions.get(i) + thisUserAnswer + "\nCorrect Answer: " + thisCorrectAnswer);
-            if (thisCorrectAnswer.toLowerCase().equals(thisUserAnswer.toLowerCase())) {
-                System.out.println("Correct!\n");
-            } else {
-                System.out.println("Incorrect.\n");
-            }
+            questions.get(i).grader(thisUserAnswer, thisCorrectAnswer);
+//            if (thisCorrectAnswer.toLowerCase().equals(thisUserAnswer.toLowerCase())) {
+//                System.out.println("Correct!\n");
+//            } else {
+//                System.out.println("Incorrect.\n");
+//            }
         }
     }
 
