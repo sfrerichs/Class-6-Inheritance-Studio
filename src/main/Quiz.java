@@ -30,11 +30,6 @@ public class Quiz {
             String thisUserAnswer = userAnswers.get(i);
             System.out.println(questions.get(i) + thisUserAnswer + "\nCorrect Answer: " + thisCorrectAnswer);
             questions.get(i).grader(thisUserAnswer, thisCorrectAnswer);
-//            if (thisCorrectAnswer.toLowerCase().equals(thisUserAnswer.toLowerCase())) {
-//                System.out.println("Correct!\n");
-//            } else {
-//                System.out.println("Incorrect.\n");
-//            }
         }
     }
 

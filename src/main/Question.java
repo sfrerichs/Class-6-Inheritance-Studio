@@ -10,17 +10,12 @@ public abstract class Question {
         question = aQuestion;
     }
 
+    //answer methods
+    public abstract void answerChoices(String aAnswerChoices);
     public abstract void answer(String aAnswer);
 
     //grading method
     public abstract void grader(String userAnswer, String correctAnswer);
-
-    //toString
-//    @Override
-//    public String toString() {
-//        return question + "\nYour Answer: ";
-//    }
-
 
     //getters and setters
     public String getQuestion() {

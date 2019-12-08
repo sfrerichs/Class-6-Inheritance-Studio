@@ -1,9 +1,16 @@
 package main;
 
+import java.util.ArrayList;
+
 public class MultipleChoice extends Question {
+    ArrayList<String> multChoices = new ArrayList<>();
 
     public void answer(String aAnswer) {
         correctAnswer = aAnswer;
+    }
+
+    public void answerChoices(String aAnswer) {
+        multChoices.add(aAnswer);
     }
 
     public void grader(String userAnswer, String correctAnswer) {
@@ -17,6 +24,8 @@ public class MultipleChoice extends Question {
     //toString
     @Override
     public String toString() {
-        return "Enter letter of correct answer: " + question + "\nYour Answer: ";
+        return question + "\n" + multChoices + "\nEnter letter of correct answer: ";
     }
+
+
 }

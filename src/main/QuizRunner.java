@@ -16,9 +16,22 @@ public class QuizRunner {
         q2.answer("False");
         myQuiz.addQuestionToQuiz(q2);
 
-//        Question q3 = new MultipleChoice();
-//        q3.question("Which color is yellow?\n a) blue\n b) yellow\n c)green", "b");
-//        myQuiz.addQuestionToQuiz(q3);
+        Question q3 = new MultipleChoice();
+        q3.question("Which color is yellow?");
+        q3.answerChoices("A) Blue");
+        q3.answerChoices("B) Yellow");
+        q3.answerChoices("C) Green");
+        q3.answer("b");
+        myQuiz.addQuestionToQuiz(q3);
+
+        Question q4 = new CheckBoxes();
+        q4.question("Select fruits:");
+        q4.answerChoices("a) banana");
+        q4.answerChoices("b) lettuce");
+        q4.answerChoices("c) apple");
+        q4.answerChoices("d) lemon");
+        q4.answer("acd");
+        myQuiz.addQuestionToQuiz(q4);
 
         //present questions to user
         //accept user responses

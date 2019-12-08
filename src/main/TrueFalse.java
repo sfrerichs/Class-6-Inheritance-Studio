@@ -6,6 +6,9 @@ public class TrueFalse extends Question{
         correctAnswer = aAnswer;
     }
 
+    public void answerChoices(String aAnswer) {
+    }
+
     //accepts t or true and f or false for answers
     public void grader(String userAnswer, String correctAnswer) {
         if (userAnswer.toLowerCase().equals("t")) {
